@@ -15,7 +15,7 @@ import time
 # För läsning av orienteringar på mål #
 #######################################
 
-# För att installera espeak kör följande i ett kommandofönster: pip3 install python-espeak
+# För att installera espeak kör följande i ett kommandofönster: sudo apt-get install python3-espeak
 from espeak import espeak
 
 # Definierar vilken röst som skall användas.
