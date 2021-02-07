@@ -18,7 +18,7 @@ import time
 # För att installera espeak kör följande i ett kommandofönster: sudo apt-get install python3-espeak
 from espeak import espeak
 
-# Definierar vilken röst som skall användas.
+# Definierar vilken röst som skall användas
 # Testa att byta till annan tex m1 eller f2
 espeak.set_voice("sv+m3")
 
