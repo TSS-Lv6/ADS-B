@@ -1,3 +1,3 @@
 # ADS-B
 
-Kod för hemstudieuppgift v108.
+Beskrivning av hemstudieuppgift v108 samt tillhörande kod.
