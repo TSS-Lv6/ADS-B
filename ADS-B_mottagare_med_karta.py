@@ -315,7 +315,7 @@ while not done:
                     or ppiHexKod == '4a910f'  # SE-DHO TGT01
                     or ppiHexKod == '4a9110'  # SE-DHP TGT02
                     or ppiHexKod == '4ac861'  # SE-RCA TGT03
-                    or ppiHexKod == '39c422'):
+                    or ppiHexKod == '39c422'):  # Skriv in hexkoden på denna raden för något av de mål som mottas just nu. För att testa ommärkningen
                     pygame.draw.polygon(screen, RED, [[ppiMittX + ppiTargetX, ppiMittY - ppiTargetY - 10],
                                                       [ppiMittX + ppiTargetX - 10, ppiMittY - ppiTargetY + 10],
                                                       [ppiMittX + ppiTargetX + 10, ppiMittY - ppiTargetY + 10]], 3)
