@@ -35,7 +35,7 @@ my_clock = pygame.time.Clock()
 ppiMittX = 300
 ppiMittY = 300
 
-# Konfigurerar bakgrundskartan
+# Konfigurerar bakgrundskartan.
 try:
     kartMittX = (67.34 * egenLong) - 391  # Omvandling av grad till pixel i just denna karta
     kartMittY = (- 2.5 * egenLat * egenLat) + (163.25 * egenLat) + 755
@@ -192,7 +192,7 @@ while not done:
     ppiSvepY = -250 * cos(angle) + ppiMittY
     pygame.draw.line(screen, DARKDARKGREEN, [ppiMittX, ppiMittY], [ppiSvepX, ppiSvepY], 6)
 
-    # Ritar ut avståndsringarna med 10 km emellan
+    # Ritar ut avståndsringarna var 10:e km. Det går 5 pixlar på varje km.
     pygame.draw.ellipse(screen, DARKGREEN, [ppiMittX - 50, ppiMittY - 50, 100, 100], 2)
     pygame.draw.ellipse(screen, DARKGREEN, [ppiMittX - 100, ppiMittY - 100, 200, 200], 2)
     pygame.draw.ellipse(screen, DARKGREEN, [ppiMittX - 150, ppiMittY - 150, 300, 300], 2)
