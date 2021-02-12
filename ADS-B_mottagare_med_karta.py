@@ -65,8 +65,8 @@ done = False  # För att stoppa huvudloopen
 angle = 0  # Svepets vinkel på ppi:et
 updateCounter = 0  # Stegar upp från 0 till 60 på en sekund
 antalMottagnaFlygplan = 0 
-ListaMedGamlaPositionerX = []
-ListaMedGamlaPositionerY = []
+listaMedGamlaPositionerX = []
+listaMedGamlaPositionerY = []
 mottagenListaMedFlygplan = []
 internListaMedFlygplan = []
 ettFlygplansData = []
@@ -172,13 +172,13 @@ while not done:
                 
                 # Lägger till den uträknade positionen i listan för gamla positioner
                 if avst < 61:
-                    ListaMedGamlaPositionerX.append(targetX)
-                    ListaMedGamlaPositionerY.append(targetY)
+                    listaMedGamlaPositionerX.append(targetX)
+                    listaMedGamlaPositionerY.append(targetY)
          
         # För att efter hand ta bort gamla positioner då inga flygplan finns
         if antalMottagnaFlygplan == 0:
-            ListaMedGamlaPositionerX.append(0)
-            ListaMedGamlaPositionerY.append(0)
+            listaMedGamlaPositionerX.append(0)
+            listaMedGamlaPositionerY.append(0)
     
     ######################################
     # Saker som skall utföras varje gång #
@@ -200,15 +200,15 @@ while not done:
     pygame.draw.ellipse(screen, DARKGREEN, [ppiMittX - 250, ppiMittY - 250, 500, 500], 2)
         
     # Ritar ut listan med gamla positioner
-    for j in range(len(ListaMedGamlaPositionerX)):
-        ppiHistX = ListaMedGamlaPositionerX[j]
-        ppiHistY = ListaMedGamlaPositionerY[j]
+    for j in range(len(listaMedGamlaPositionerX)):
+        ppiHistX = listaMedGamlaPositionerX[j]
+        ppiHistY = listaMedGamlaPositionerY[j]
         pygame.draw.ellipse(screen, MEDIUMGREEN, [ppiMittX + ppiHistX - 2, ppiMittY - ppiHistY - 2, 4, 4], 0)
         
     # Raderar de äldsta av de gamla positionerna
-    while len(ListaMedGamlaPositionerX) > (antalMottagnaFlygplan * 30):
-        ListaMedGamlaPositionerX.pop(0)
-        ListaMedGamlaPositionerY.pop(0)
+    while len(listaMedGamlaPositionerX) > (antalMottagnaFlygplan * 30):
+        listaMedGamlaPositionerX.pop(0)
+        listaMedGamlaPositionerY.pop(0)
 
     # Ritar ut linjen mellan ppi:et och textdelen
     pygame.draw.line(screen, DARKGREEN, [600, 0], [600, 600], 2)
