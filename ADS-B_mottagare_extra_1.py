@@ -31,7 +31,7 @@ class GetData(threading.Thread):
         
     def run(self):
         global FR24_mottagenListaMedFlygplan
-        # OBS att du kan justera området som du hämtar flygplan ifrån i raden nedan (bounds)
+        # OBS att du kan justera området som du hämtar flygplan ifrån i raden nedan (bounds är alltså lat/long)
         FR24_API = "https://data-live.flightradar24.com/zones/fcgi/feed.js?bounds=58.00,55.00,11.00,14.00"
         while self.running:
             time.sleep(1)
