@@ -73,11 +73,12 @@ while not done:
             FR24_squawk = FR24_ettFlygplan[6]
             FR24_type = str(FR24_ettFlygplan[8])
             FR24_id = str(FR24_ettFlygplan[9])
+            FR24_timestamp = FR24_ettFlygplan[10]
             FR24_fromAirport = str(FR24_ettFlygplan[11])
             FR24_toAirport = str(FR24_ettFlygplan[12])
             FR24_flight = str(FR24_ettFlygplan[16])
             print(FR24_hexKod,FR24_targetLat,FR24_targetLong,FR24_heading,FR24_altitude,FR24_speed,
-                  FR24_squawk,FR24_type,FR24_id,FR24_fromAirport,FR24_toAirport,FR24_flight)
+                  FR24_squawk,FR24_type,FR24_id,FR24_timestamp,FR24_fromAirport,FR24_toAirport,FR24_flight)
     except:
         print("Error decoding message")
     
